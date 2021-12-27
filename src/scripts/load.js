@@ -3,7 +3,7 @@ let accents = {
     "primary": "accent1",
     "secondary": "accent2",
     "tertiary": "accent3",
-    "neutral": "neutral",
+    "neutral": "neutral1",
     "neutralVariant": "neutral2",
     "error": "error"
 }
