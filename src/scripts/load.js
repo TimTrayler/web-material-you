@@ -30,7 +30,6 @@ function isLightmode() {
 
 chrome.storage.sync.get(["theme"], function(result) {
     const theme = result.theme
-    console.log(theme)
 
     let style = document.createElement("style")
 

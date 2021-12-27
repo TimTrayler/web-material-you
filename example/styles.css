@@ -1,0 +1,35 @@
+
+body {
+    background-color: var(--myw-background, #1C1B1F);
+    color: var(--myw-on-background, #E6E1E5);
+
+    font-family: 'Product Sans', 'Roboto', 'Segoe UI', 'Helvetica', sans-serif;
+}
+
+.btn {
+    border: none;
+    border-radius: 999999px;
+
+    font-weight: bold;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    padding: 1.3vh 1.5vw;
+}
+
+
+.btn:hover {
+    opacity: 0.92;
+}
+
+.btn:active {
+    opacity: 0.76;
+}
+
+
+.btn-primary:not(.btn-outlined) {
+    background-color: var(--myw-primaryContainer, #4F378B);
+    color: var(--myw-onPrimaryContainer, #EADDFF);
+}
