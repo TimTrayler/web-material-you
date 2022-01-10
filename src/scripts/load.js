@@ -46,12 +46,12 @@ chrome.storage.sync.get(["theme"], function(result) {
     for(let themeName of ["dark", "light"]) {
         for(let cN of Object.keys(theme[themeName])) {
             // Convert lower camel case ('primaryContainer') to kebab case ('primary-container')
-            cN = cn.replace(/([A-Z])/g, '-$1').toLowerCase()
+            let nCN = cN.replace(/([A-Z])/g, '-$1').toLowerCase()
 
-            style.innerHTML += `--myw-${themeName}-${cN}: ` + theme[themeName][cN] + ";\n"
+            style.innerHTML += `--myw-${themeName}-${nCN}: ` + theme[themeName][cN] + ";\n"
 
             if((isLightmode() && themeName === "light") || (!isLightmode() && themeName === "dark")) {
-                style.innerHTML += `--myw-${cN}: ` + theme[themeName][cN] + ";\n"
+                style.innerHTML += `--myw-${nCN}: ` + theme[themeName][cN] + ";\n"
             }
         }
     }

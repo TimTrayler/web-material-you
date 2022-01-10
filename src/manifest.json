@@ -1,6 +1,6 @@
 {
     "name": "Material You Web",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "This allows websites to use your Material You palette.",
     "icons": {
         "256": "./assets/logo-256.png"
@@ -19,6 +19,12 @@
       {
         "matches": ["*://material-foundation.github.io/material-theme-builder*"],
         "js": ["./scripts/mtb.js"]
+      },
+      {
+        "matches": [
+          "*://m3.material.io/*"
+        ],
+        "js": ["./scripts/load-mio.js"]
       }
     ],
 
@@ -36,6 +42,7 @@
 
     "host_permissions": [
       "*://material-foundation.github.io/material-theme-builder",
+      "*://m3.material.io/*",
       "<all_urls>"
     ],
 
