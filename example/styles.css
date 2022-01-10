@@ -30,6 +30,6 @@ body {
 
 
 .btn-primary:not(.btn-outlined) {
-    background-color: var(--myw-primaryContainer, #4F378B);
-    color: var(--myw-onPrimaryContainer, #EADDFF);
+    background-color: var(--myw-primary-container, #4F378B);
+    color: var(--myw-on-primary-container, #EADDFF);
 }
