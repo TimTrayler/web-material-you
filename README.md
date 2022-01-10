@@ -21,6 +21,6 @@ Light/Dark theme colors based on device dark/lightmode: ```--myw-[primary/on-pri
 The simplest way to prevent issues when the user doesn't have the extension installed is to use fallbacks.
 Example of a fallback: ```var(--myw-surface, #FFFBFE)```
 
-# Examples
+## Examples
 [Example 1](https://github.com/TimTrayler/web-material-you/tree/master/example)
 
