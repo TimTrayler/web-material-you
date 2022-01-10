@@ -1,5 +1,5 @@
 
-let accents = {
+const accents = {
     "primary": "accent1",
     "secondary": "accent2",
     "tertiary": "accent3",
@@ -8,7 +8,7 @@ let accents = {
     "error": "error"
 }
 
-let luminances = {
+const luminances = {
     0: 1000,
     10: 900,
     20: 800,
@@ -33,7 +33,7 @@ chrome.storage.sync.get(["theme"], function(result) {
 
     let style = document.createElement("style")
 
-    style.classList.add("MYW-colors")
+    style.classList.add("myw-colors")
 
     style.innerHTML += `:root {`
 
@@ -45,6 +45,9 @@ chrome.storage.sync.get(["theme"], function(result) {
 
     for(let themeName of ["dark", "light"]) {
         for(let cN of Object.keys(theme[themeName])) {
+            // Convert lower camel case ('primaryContainer') to kebab case ('primary-container')
+            cN = cn.replace(/([A-Z])/g, '-$1').toLowerCase()
+
             style.innerHTML += `--myw-${themeName}-${cN}: ` + theme[themeName][cN] + ";\n"
 
             if((isLightmode() && themeName === "light") || (!isLightmode() && themeName === "dark")) {
@@ -56,4 +59,4 @@ chrome.storage.sync.get(["theme"], function(result) {
     style.innerHTML += `}`
 
     document.head.appendChild(style)
-});
+})
