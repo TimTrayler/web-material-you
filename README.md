@@ -8,6 +8,8 @@
 3. Click 'Apply' in the top right corner
 4. Enjoy.
 
+# [Demo (when installed)](https://m3.material.io)
+
 # Implementation
 Implementation is very simple. The palette will be saved in CSS variables:
 Raw Colors: ```--myw-[accent1/accent2/accent3/neutral1/neutral2/error]/[0/10/50/100/200/300/400/500/600/700/800/900/1000]```
