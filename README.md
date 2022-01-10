@@ -1,5 +1,7 @@
 # Web Material You
 
+# [Download](https://github.com/TimTrayler/web-material-you/releases/latest/download/wmy.crx)
+
 # Setup (after installation)
 1. Open [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
 2. Choose your wallpaper/palette/...
