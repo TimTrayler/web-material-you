@@ -39,7 +39,29 @@ chrome.storage.sync.get(["theme"], function(result) {
 
     for(let [an, av] of Object.entries(accents)) {
         for(let [ln, lv] of Object.entries(luminances)) {
-            style.innerHTML += `--myw-${av}-${lv}: ` + theme[an][`luminance${ln}`] + ";\n"
+            switch(av) {
+                case 'accent1':
+                    av = 'primary'
+                    break
+
+                case 'accent2':
+                    av = 'secondary'
+                    break
+
+                case 'accent3':
+                    av = 'tertiary'
+                    break
+
+                case 'neutral1':
+                    av = 'neutral'
+                    break
+
+                case 'neutral2':
+                    av = 'neutral-variant'
+                    break
+            }
+
+            style.innerHTML += `--md-sys-ref-${av}-${lv}: ` + theme[an][`luminance${ln}`] + ";\n"
         }
     }
 
@@ -48,10 +70,10 @@ chrome.storage.sync.get(["theme"], function(result) {
             // Convert lower camel case ('primaryContainer') to kebab case ('primary-container')
             let nCN = cN.replace(/([A-Z])/g, '-$1').toLowerCase()
 
-            style.innerHTML += `--myw-${themeName}-${nCN}: ` + theme[themeName][cN] + ";\n"
+            style.innerHTML += `--md-sys-color-${themeName}-${nCN}: ` + theme[themeName][cN] + ";\n"
 
             if((isLightmode() && themeName === "light") || (!isLightmode() && themeName === "dark")) {
-                style.innerHTML += `--myw-${nCN}: ` + theme[themeName][cN] + ";\n"
+                style.innerHTML += `--md-sys-color-${nCN}: ` + theme[themeName][cN] + ";\n"
             }
         }
     }

@@ -1,6 +1,6 @@
 
 body {
-    background-color: var(--myw-background, #1C1B1F);
+    background-color: var(--md-sys-color-background, #1C1B1F);
     color: var(--myw-on-background, #E6E1E5);
 
     font-family: 'Product Sans', 'Roboto', 'Segoe UI', 'Helvetica', sans-serif;
@@ -30,6 +30,6 @@ body {
 
 
 .btn-primary:not(.btn-outlined) {
-    background-color: var(--myw-primary-container, #4F378B);
-    color: var(--myw-on-primary-container, #EADDFF);
+    background-color: var(--md-sys-color-primary-container, #4F378B);
+    color: var(--md-sys-color-on-primary-container, #EADDFF);
 }
